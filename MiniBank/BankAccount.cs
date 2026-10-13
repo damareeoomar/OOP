@@ -3,6 +3,7 @@ public class BankAccount
     public static int TotalAccounts { get; private set; }
     public string Owner { get; private set; }   
     public decimal Balance { get; private set; }  // private set for encapsulation. 
+    protected string AccountType = "General";  // change to private to see the effect on encapsulationon in herited classes(build fails)
 
     //Constructor (same name as the class + no return type)
     // public BankAccount(string owner, decimal startingBalance)
@@ -25,6 +26,7 @@ public class BankAccount
         this.Owner = owner;
         this.Balance = startingBalance;
         TotalAccounts++;
+        Console.WriteLine("BankAccount constructor executed");
     }
 
     public static void ShowBankInfo()
@@ -46,7 +48,7 @@ public class BankAccount
         Console.WriteLine($"Balance: {this.Balance}");
     }
 
-    
+
     // methods 
     public void Deposit(decimal amount)
     {
