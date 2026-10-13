@@ -43,6 +43,16 @@
 
 //Bank object part 
 
+// Bank bank = new Bank("MiniBank");
+
+// BankAccount account1 = new BankAccount("John Doe", 1000);
+// BankAccount account2 = new BankAccount("Jane Doe", 2000);
+
+// bank.AddAccount(account1);
+// bank.AddAccount(account2);
+
+// bank.ShowAllAccounts();
+
 Bank bank = new Bank("MiniBank");
 
 BankAccount account1 = new BankAccount("John Doe", 1000);
@@ -51,4 +61,10 @@ BankAccount account2 = new BankAccount("Jane Doe", 2000);
 bank.AddAccount(account1);
 bank.AddAccount(account2);
 
+Console.WriteLine("BEFORE DEPOSIT:");
+bank.ShowAllAccounts();
+
+account1.Deposit(500);
+
+Console.WriteLine("\nAFTER DEPOSIT:");
 bank.ShowAllAccounts();
