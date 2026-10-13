@@ -41,7 +41,7 @@ public class BankAccount
     //     Console.WriteLine($"Balance: {account.Balance}");
     // }
 
-    public void ShowAccountInfo() // this is the correct way to show account info for the current instance
+    public virtual void ShowAccountInfo() // this is the correct way to show account info for the current instance
     {
         Console.WriteLine("Account Information:");
         Console.WriteLine($"Owner: {this.Owner}");

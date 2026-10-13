@@ -11,4 +11,10 @@ public class SavingsAccount : BankAccount
     {
         Console.WriteLine($"Account type: {AccountType}");
     }
+
+    public override void ShowAccountInfo()
+    {
+        base.ShowAccountInfo();
+        Console.WriteLine($"Interest Rate: {InterestRate:P}");
+    }
 }
