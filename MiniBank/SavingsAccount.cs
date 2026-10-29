@@ -17,4 +17,10 @@ public class SavingsAccount : BankAccount
         base.ShowAccountInfo();
         Console.WriteLine($"Interest Rate: {InterestRate:P}");
     }
+    public void ApplyInterest()
+    {
+        decimal interest = Balance * InterestRate;
+
+        Deposit(interest);
+    }
 }
