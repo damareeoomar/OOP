@@ -21,4 +21,14 @@ public class Bank
             account.ShowAccountInfo();
         }
     }
+
+    public void ProcessMonthlyAccounts()
+    {
+        Console.WriteLine("\n--- Processing Monthly Accounts ---");
+
+        foreach (BankAccount account in accounts)
+        {
+            account.PerformMonthlyProcessing();
+        }
+    }
 }
