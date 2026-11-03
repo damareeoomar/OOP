@@ -28,3 +28,27 @@ bank.AddAccount(savings2);
 
 bank.ShowAllAccounts();
 
+
+//  polymorphism starts here
+List<BankAccount> accounts = new();
+
+accounts.Add(current);
+accounts.Add(savings);
+accounts.Add(current2);
+accounts.Add(savings2);
+
+Console.WriteLine("\n--- Monthly Processing ---");
+
+foreach (BankAccount account in accounts)
+{
+    account.PerformMonthlyProcessing();
+}
+
+
+Console.WriteLine("\n--- Account Information After Processing ---");
+
+foreach (BankAccount account in accounts)
+{
+    account.ShowAccountInfo();
+}
+

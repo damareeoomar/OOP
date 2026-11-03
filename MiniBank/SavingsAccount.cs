@@ -23,4 +23,9 @@ public class SavingsAccount : BankAccount
 
         Deposit(interest);
     }
+
+    public override void PerformMonthlyProcessing()
+    {
+        ApplyInterest();
+    }
 }

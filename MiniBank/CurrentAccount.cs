@@ -13,4 +13,9 @@ public class CurrentAccount : BankAccount
         base.ShowAccountInfo();
         Console.WriteLine($"Transaction Fee: {TransactionFee:C}");
     }
+
+    public override void PerformMonthlyProcessing()
+    {
+        Console.WriteLine("Current account: no interest was applied.");
+    }
 }

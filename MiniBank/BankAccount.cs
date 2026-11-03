@@ -66,4 +66,9 @@ public class BankAccount
             Balance -= amount;
         }
     }
+
+    public virtual void PerformMonthlyProcessing()
+    {
+        Console.WriteLine("No monthly processing required for this account.");
+    }
 }
